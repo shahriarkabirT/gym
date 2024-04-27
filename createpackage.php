@@ -11,21 +11,58 @@
     <title>Creating Packages</title>
     
 </head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            width: 300px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: calc(100% - 10px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 <body>
 <h1><center>Create Package</center></h1>
-<form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
-<label>Package name: </label><br>
-<input type="text" name="packname" ><br>
-<label>Price: </label><br>
-<input type="text" name="price" ><br>
-<label>Duration(Month):</label> <br>
-<input type="text" name="duration" ><br>
-<label>Savings: </label><br>
-<input type="text" name="savings" ><br>
-<label>Description: </label><br>
-<input type="text" name="description" ><br><br>
-<input type="submit" name="login" value="submit">
-</form> 
+<form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <label for="packname">Package name:</label><br>
+    <input type="text"  name="packname"><br>
+    <label for="price">Price:</label><br>
+    <input type="text" name="price"><br>
+    <label for="duration">Duration (Month):</label><br>
+    <input type="text"  name="duration"><br>
+    <label for="savings">Savings:</label><br>
+    <input type="text"  name="savings"><br>
+    <label for="description">Description:</label><br>
+    <input type="text"  name="description"><br><br>
+    <input type="submit"  name="login">
+</form>
 
 
 

@@ -73,7 +73,7 @@
             <input type="text" name="username" required><br>
             <label for="password">Password</label><br>
             <input type="password" name="pass" required><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit"  value="Submit">
         </form>
     </div>
 
@@ -83,21 +83,35 @@
     
     
 <?php 
-echo "$_POST[submit]";
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+     if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $tablename = $_POST["login_chose"];
         $username_input = $_POST["username"];
         $pass_input = $_POST["pass"];
         $sql = "SELECT username,pass FROM $tablename";
         $result = mysqli_query($conn,$sql);
-        $row = $result->fetch_assoc();
         
-        if ($result->num_rows > 0) {
-            $username_database =  "$row[username]";
-            $password_database = "$row[pass]";
+        $username_data = array();
+        $password_data = array();
+        $i = 0;
+        $no_of_rows = $result->num_rows;
+        while ($row = $result->fetch_assoc()) {
+            $username_data[$i]=  "$row[username]";
+            $password_data[$i] = "$row[pass]";
+            echo "$username_data[$i]";
+            $i++;
         }
         
+        for($j = 0 ; $j < $no_of_rows; $j++){
+            if($username_input == $username_data[$j] && $pass_input == $password_data[$j]){
+                $username_database = $username_data[$j];
+                $password_database = $password_data[$j];
+                break;
+            }
+        }
+      
+
         if($_POST["login_chose"] == "admins"){  
             if($username_input == $username_database && $pass_input == $password_database){
                 header("Location: admin.php");
@@ -124,6 +138,6 @@ echo "$_POST[submit]";
         }
          
         
-    }
+     }
     
 ?>

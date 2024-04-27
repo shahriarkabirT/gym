@@ -1,0 +1,45 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .pack-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .pack {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 30%;
+            box-sizing: border-box;
+        }
+
+        .pack div {
+            margin-bottom: 10px;
+        }
+
+        .pack form {
+            display: inline;
+        }
+
+        .pack input[type='submit'] {
+            background-color: #ff6666;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .pack input[type='submit']:hover {
+            background-color: #cc0000;
+        }
