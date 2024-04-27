@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<style>
+  body {
+    margin: 5%;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0;
+  }
+  .gallery img {
+    width: 100%;
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: transform 0.3s;
+  }
+  .gallery img:hover {
+    transform: scale(1.5);
+  display: block;
+  margin: auto;
+  }
+  .contact_us{
+    font-family: 'Times New Roman', Times, serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <img src="gallery /photos/1.jpeg" alt="Photo 1">
+  <img src="gallery /photos/2.jpeg" alt="Photo 2">
+  <img src="gallery /photos/3.jpeg" alt="Photo 3">
+  <img src="gallery /photos/4.jpeg" alt="Photo 4">
+  <img src="gallery /photos/5.jpeg" alt="Photo 5">
+  <img src="gallery /photos/6.jpeg" alt="Photo 6">
+  <img src="gallery /photos/7.jpeg" alt="Photo 7">
+  <img src="gallery /photos/10.jpeg" alt="Photo 8">
+  <img src="gallery /photos/8.jpeg" alt="Photo 9">
+  <img src="gallery /photos/9.jpeg" alt="Photo 9">
+</div><br>
+<div class="contact_us">
+
+    Contact: 01709919522
+    <br>
+    Address: House# 120, Road# 12, Sector# 10, Uttara, Dhaka-1230
+</div>
+</body>
+</html>

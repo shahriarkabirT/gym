@@ -68,7 +68,7 @@ if ($noofrows > 0) {
     }
     echo "</div>";
 }
-mysqli_close($conn);
+
 ?>
 
 </body>
@@ -93,25 +93,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO members(fullname,phone,username,pass) 
             
    VALUES('$fullname_to_insert','$contact_to_insert','$username_to_insert','$pass_to_insert'); ";
+   mysqli_query($conn, $sql);  
    
-   header ("Location:admitMembers.php");
-    //             mysqli_query($conn, $sql);  
-
-    // for ($j = 0; $j < $noofrows; $j++) {
-    //     if (isset($_POST["submit$j"]) && $_POST["submit$j"] == "Admit") {
-         
-        
-   
-    //         $sql = "INSERT INTO members(id,fullname,phone,username,pass) 
-            
-    //                                     VALUES('$id_to_insert','$fullname_to_insert','$contact_to_insert','$username_to_insert','$pass_to_insert'); ";
-   
-    //             mysqli_query($conn, $sql);  
-
-    //         header ("Location:admitMembers.php");
-    //         break; 
-    //     }
-    // }
+   $sql = "DELETE FROM registration where id = $id_to_insert"; 
+   mysqli_query($conn, $sql); 
+   header("Location:memberinsertion.html");
 }
 mysqli_close($conn);
 ?>

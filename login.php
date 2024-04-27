@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-
+    <?php include("navbar.html") ?>
 </head>
 <style>
     body {
@@ -49,8 +49,14 @@
         cursor: pointer;
     }
     input[type="submit"]:hover {
-        background-color: rgb(135, 146, 160);;
+        background-color: rgb(135, 146, 160);
     }
+    .right a {
+    color:black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
 </style>
 <body>
   <!-- <div class="loginbar">
@@ -99,7 +105,6 @@
         while ($row = $result->fetch_assoc()) {
             $username_data[$i]=  "$row[username]";
             $password_data[$i] = "$row[pass]";
-            echo "$username_data[$i]";
             $i++;
         }
         

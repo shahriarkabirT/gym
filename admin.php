@@ -1,3 +1,5 @@
+<div class="top-container">
+    <?php include("navbar.html"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +18,12 @@
             align-items: center;
             height: 100vh;
         }
+        .right a {
+    color : white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
         
         .container {
             margin-top: 10%;
@@ -28,7 +36,8 @@
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
-            background-color: #007bff;
+            background-color: rgb(125, 144, 176);
+            color: white;
             transition: all 0.3s ease;
             margin: 10px;
         }
@@ -39,7 +48,7 @@
     </style>
 </head>
 <body>
-<div class="top-container">
+
     <div class="container">
         <a href="createpackage.php">Create Packages</a><br>
         <a href="deletepackages.php">Delete Packages</a><br>
