@@ -101,8 +101,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["selectedDate"])) {
         $trainer_username = $_POST["trainer_username"];
         $sql = "INSERT INTO schedule(date,time,trainer_username) values('$selectedDate','$selectedTime','$trainer_username')";
         mysqli_query($conn,$sql); 
-        echo "Selected date: " . $selectedDate;
-        header("Location: createSchedule.php");
+        echo "<p style='color:white'>Selected date: " . $selectedDate ."</p>";
+        echo "<p style='color:white'>Schedule has been added.</p>";
     } else {
         echo "Please select date and time both.";
     } 

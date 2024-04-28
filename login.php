@@ -135,7 +135,7 @@
         } 
         if($_POST["login_chose"] == "trainers"){
            if($username_input == $username_database && $pass_input == $password_database){
-                header("Location: trainer.php");
+                header("Location: createSchedule.php");
             }
             else{
                 echo "<p align = 'center'>Invalid Username or password</p>";

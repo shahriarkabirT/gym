@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>admin</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -53,7 +53,7 @@
         <a href="createpackage.php">Create Packages</a><br>
         <a href="deletepackages.php">Delete Packages</a><br>
         <a href="memberReq.php">Member Request</a><br>
-        <a href="admitMembers.php"> Admit Members</a><br>
+        <a href="addtrainers.php">Add Trainers</a><br>
     </div>
 </div>
 </body>
